@@ -1,7 +1,6 @@
-﻿using MTFW.Core.Internal;
-using Ninject.Modules;
+﻿using Ninject.Modules;
 
-namespace MTFW.Core
+namespace MTFW.Core.Runtime
 {
     public class CoreModule : NinjectModule
     {

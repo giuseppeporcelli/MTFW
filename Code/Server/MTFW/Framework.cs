@@ -1,4 +1,4 @@
-﻿using MTFW.Core;
+﻿using MTFW.Core.Runtime;
 using Ninject;
 
 namespace MTFW

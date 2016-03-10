@@ -2,6 +2,7 @@ Bin
 bin
 obj
 packages
+Deploy
 TestResults
 TestDeploy
 .DS_Store

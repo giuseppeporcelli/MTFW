@@ -1,8 +1,9 @@
-﻿using System;
+﻿using MTFW.Core.Runtime.DataLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace MTFW.Core.Internal
+namespace MTFW.Core.Runtime
 {
     /// <summary>
     /// Represents the tenant service.
@@ -17,6 +18,18 @@ namespace MTFW.Core.Internal
         public TenantService()
         {
             _tenants = new List<Tenant>();
+
+            using (MTWFDbContext context = new MTWFDbContext())
+            {
+                context.Tenants.Add(new Tenant()
+                {
+                    Name = "Tenant di prova",
+                    TenantGuid = Guid.NewGuid()
+                });
+                context.SaveChanges();
+
+                var tenants = context.Tenants.ToList();
+            }            
         }
 
         Tenant ITenantService.GetTenant(Guid tenantGuid)

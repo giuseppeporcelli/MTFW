@@ -1,7 +1,7 @@
 ﻿using Ninject;
 using System;
 
-namespace MTFW.Core.Internal
+namespace MTFW.Core.Runtime
 {
     public class UserService : IUserService
     {
